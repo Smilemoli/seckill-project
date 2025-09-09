@@ -1,0 +1,17 @@
+# file: backend/config/config.yaml
+mysql:
+  # 将 host 从 127.0.0.1 修改为 mysql (docker-compose 中的服务名)
+  dsn: "seckill_user:your_strong_user_password@tcp(mysql:3306)/seckill_db?charset=utf8mb4&parseTime=True&loc=Local"
+
+jwt:
+  secret: "a_very_secret_key_change_it"
+
+redis:
+  # 将 addr 修改为 redis (docker-compose 中的服务名)
+  addr: "redis:6379"
+  password: ""
+  db: 0
+
+rabbitmq:
+  # 将 host 修改为 rabbitmq (docker-compose 中的服务名)
+  url: "amqp://guest:guest@rabbitmq:5672/"
